@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="resouces/css/findAFileCommon.css">
+    <link rel="stylesheet" type="text/css" href="resouces/css/upload.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <title>FindAFile</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-block">
+            <a href="#" class="goToHomePage">
+                <img src="vendors/img/FindAFileLogo.png " class="logo">
+                <h3 class="logo-text">FindAFile</h3>
+            </a>
+            <input class="logout-btn buttonCommon" type="submit" value="Sign Out" id="logOut">
+        </div>
+    </header>
+    <div class="main-div">
+
+        <div class="upload-box">
+            <h1 class="main-text">Contribute your knowledge!!</h1>
+            <form action="/FindAFileUpload" method="post" enctype="multipart/form-data" name="fileUploderForm" id="uploadForm">
+                <input type='hidden' name="userName" id = "uploadUserName"></input>
+                <div class="upload-file-box">
+                    <label class="upload-label" for="file-upload">Choose File</label>
+                    <input type='text' class="upload-file-name" placeholder="File Name" disabled></input>
+                </div>
+                <input id="file-upload" class="upload-bar upload-space" type="file" name="myFile" id="uploadfile">
+                <div class="description-box">
+                    <h3 class="description-label">File Description:</h3>
+                    <textarea class="descriptionArea" id = "descriptionArea" cols="50" rows="5" name="docDesc" maxlength="280"></textarea>
+                </div>
+            </form>
+            <input class="upload-button upload-space buttonCommon" type="submit" value="Upload" id="uploadButton">
+        </div>
+
+    </div>
+
+    <div class="footer-buttons">
+        <div class="upload-button-block">
+            <a href="#" class="goToSearchPage">
+                <i class="ion-ios-search-strong"></i>
+            </a>
+            <h3 class="footer-h3">Search Content</h3>
+            <p class="footer-btn-txt">Explore More !</p>
+        </div>
+    </div>
+    <script src="resouces/js/FindAFileCommon.js"></script>
+    <script src="resouces/js/FindAFileUpload.js"></script>
+</body>
+
+</html>
